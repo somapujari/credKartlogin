@@ -14,5 +14,5 @@ def test_login():
         assert True
     else:
         assert False
-    print('the program is compleated') 
-    
+    print('the program is compleated')
+    driver.close()

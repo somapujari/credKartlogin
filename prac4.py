@@ -3,7 +3,9 @@ from selenium.webdriver.common.by import By
 
 
 def test_login():
-    driver = webdriver.Chrome()
+    chromeoptions = webdriver.ChromeOptions()
+    chromeoptions.binary_location = R'C:\Users\Dell\AppData\Local\Google\Chrome\Application\chrome.exe'
+    driver = webdriver.Chrome(options=chromeoptions)
     driver.get('https://automation.credence.in/login')
 
     driver.find_element(By.ID, 'email').send_keys('soma1@credence.com')
